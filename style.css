@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, #d0ff9a 0%, #d5ec04 99%, #fad0c4 100%);
+    position: relative;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.bubbles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -50px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.281);
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: rise 8s infinite ease-in;
+}
+
+.bubble:nth-child(1) {
+    left: 10%;
+    width: 60px;
+    height: 60px;
+    animation-duration: 10s;
+}
+
+.bubble:nth-child(2) {
+    left: 20%;
+    width: 20px;
+    height: 20px;
+    animation-duration: 12s;
+}
+
+.bubble:nth-child(3) {
+    left: 30%;
+    width: 80px;
+    height: 80px;
+    animation-duration: 14s;
+}
+
+.bubble:nth-child(4) {
+    left: 40%;
+    width: 30px;
+    height: 30px;
+    animation-duration: 16s;
+}
+
+.bubble:nth-child(5) {
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    animation-duration: 18s;
+}
+
+.bubble:nth-child(6) {
+    left: 60%;
+    width: 70px;
+    height: 70px;
+    animation-duration: 20s;
+}
+
+.bubble:nth-child(7) {
+    left: 70%;
+    width: 40px;
+    height: 40px;
+    animation-duration: 22s;
+}
+
+.bubble:nth-child(8) {
+    left: 80%;
+    width: 60px;
+    height: 60px;
+    animation-duration: 24s;
+}
+
+.bubble:nth-child(9) {
+    left: 90%;
+    width: 30px;
+    height: 30px;
+    animation-duration: 26s;
+}
+
+.bubble:nth-child(10) {
+    left: 95%;
+    width: 20px;
+    height: 20px;
+    animation-duration: 28s;
+}
+
+@keyframes rise {
+    0% {
+        bottom: -50px;
+        transform: translateX(0);
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        bottom: 100%;
+        transform: translateX(100px);
+        opacity: 0;
+    }
+}
+
+.content {
+    z-index: 2;
+    position: relative;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+    animation: bounce 2s infinite;
+}
+
+.text-white {
+    color: #fff;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
